@@ -1,5 +1,12 @@
+# utilization: 50
+# replicas: 1
+# imageURL: 353654037274.dkr.ecr.us-east-1.amazonaws.com/expense/frontend
+# imageVersion: IMAGE_VERSION
+# targetARN: TARGET_ARN
+
+
 utilization: 50
 replicas: 1
 imageURL: 353654037274.dkr.ecr.us-east-1.amazonaws.com/expense/frontend
-imageVersion: IMAGE_VERSION
-targetARN: TARGET_ARN
+imageVersion: ""
+targetARN: ""
