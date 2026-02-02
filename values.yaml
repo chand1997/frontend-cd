@@ -1,0 +1,5 @@
+utilization: 50
+replicas: 1
+imageURL:
+imageVersion: IMAGE_VERSION
+targetARN: TARGET_ARN
