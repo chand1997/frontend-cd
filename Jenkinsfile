@@ -29,7 +29,7 @@ pipeline{
             sh """
                 aws eks update-kubeconfig --region us-east-1 --name expense-dev
                 
-                helm upgrade --install frontend-1 -n expense -f values.yaml --set imageVersion=${params.version} --set targetARN=${env.TARGET_ARN}  .
+                helm upgrade --install frontend -n expense -f values.yaml --set imageVersion=${params.version} --set targetARN=${env.TARGET_ARN}  .
                 """
             }  
         }
