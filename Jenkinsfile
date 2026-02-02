@@ -2,7 +2,8 @@ pipeline{
     parameters{
         string(name: 'version', description: 'Enter version')
     }
-    stage("get-target-arn"){
+    stages{
+         stage("get-target-arn"){
         steps{
             script{
                 withAWS(credentials: 'aws-creds'){
@@ -34,5 +35,8 @@ pipeline{
         }
        }
     }
+
+    }
+   
 
 }
