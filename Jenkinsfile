@@ -4,7 +4,7 @@ pipeline{
         string(name: 'version', description: 'Enter version')
     }
     stages{
-         stage("get-target-arn"){
+    stage("get-target-arn"){
         steps{
             script{
                 withAWS(credentials: 'aws-creds'){
@@ -29,7 +29,7 @@ pipeline{
             sh """
                 aws eks update-kubeconfig --region us-east-1 --name expense-dev
                 sed -i 's/IMAGE_VERSION/${params.version}/g' values.yaml
-                sed -i 's/TARGET_ARN/${env.TARGET_ARN}/g' values.yaml
+                sed -i 's|TARGET_ARN/${env.TARGET_ARN}|g' values.yaml
                 helm upgrade --install frontend -n expense -f values.yaml .
                 """
             }  
